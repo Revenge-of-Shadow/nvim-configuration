@@ -1,0 +1,66 @@
+vim.api.nvim_set_keymap('i', '<C-H>', '<C-W>', {noremap = true})
+
+
+vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>vv", vim.cmd.Ex)
+
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+vim.keymap.set("n", "J", "mzJ`z")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+-- greatest remap ever
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
+-- next greatest remap ever : asbjornHaland
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+
+-- This is going to get me cancelled
+vim.keymap.set("i", "<C-c>", "<Esc>")
+
+vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+
+vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
+vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+
+vim.keymap.set("n", "<leader>rp", function()
+  local name = vim.fn.expand('%:t')
+  vim.cmd(":vsplit term://%:p:h//python " .. name)
+end)
+
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+
+vim.keymap.set("n", "<leader><leader>", function()
+    vim.cmd("so")
+end)
+
+
+-- 'tever.
+--
+-- Open compiler
+vim.api.nvim_set_keymap('n', '<F6>', "<cmd>CompilerOpen<cr>", { noremap = true, silent = true })
+
+-- Redo last selected option
+vim.api.nvim_set_keymap('n', '<S-F6>',
+     "<cmd>CompilerStop<cr>" -- (Optional, to dispose all tasks before redo)
+  .. "<cmd>CompilerRedo<cr>",
+ { noremap = true, silent = true })
+
+-- Toggle compiler results
+vim.api.nvim_set_keymap('n', '<S-F7>', "<cmd>CompilerToggleResults<cr>", { noremap = true, silent = true })
+
+
+vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left <CR>', {})
+vim.keymap.set("n", "<F10>", ":split | execute 'terminal ./%:r' | startinsert<CR>", { buffer = true, silent = true, noremap = true })
