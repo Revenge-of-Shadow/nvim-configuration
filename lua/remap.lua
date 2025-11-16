@@ -32,6 +32,3 @@ vim.keymap.set("n", "<S-C-j>", "<cmd>lprev<CR>zz")
 vim.keymap.set('n', '<leader>o', ':<C-u>call append(line("."), repeat([""], v:count1))<CR>')
 vim.keymap.set('n', '<leader>O', ':<C-u>call append(line(".")-1, repeat([""], v:count1))<CR>')
 
-vim.keymap.set("n", "<TAB>", ":bn<CR>")
-vim.keymap.set("n", "<S-TAB>", ":bp<CR>")
-vim.keymap.set("n", "<leader>bd", ":bd<CR>") -- from Doom Emacs
