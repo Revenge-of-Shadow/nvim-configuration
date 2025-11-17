@@ -21,7 +21,6 @@ vim.keymap.set("n", "<C-a>", "<Esc>A", { noremap = true })
 vim.keymap.set("n", "<C-i>", "<Esc>I", { noremap = true })
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<C-f>", vim.lsp.buf.format)
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
@@ -31,4 +30,3 @@ vim.keymap.set("n", "<S-C-j>", "<cmd>lprev<CR>zz")
 -- Insert empty line without entering insert mode
 vim.keymap.set('n', '<leader>o', ':<C-u>call append(line("."), repeat([""], v:count1))<CR>')
 vim.keymap.set('n', '<leader>O', ':<C-u>call append(line(".")-1, repeat([""], v:count1))<CR>')
-

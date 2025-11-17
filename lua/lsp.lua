@@ -1,6 +1,7 @@
 vim.lsp.enable('lua_ls')
 vim.lsp.enable('clangd_ls')
 vim.lsp.enable('pylsp')
+vim.lsp.enable('java_language_server')
 
 -- vim.api.nvim_create_autocmd('LspAttach', {
 --   callback = function(ev)
@@ -18,9 +19,7 @@ vim.lsp.enable('pylsp')
 --
 
 vim.diagnostic.config({
-  virtual_lines = {
-    current_line = true,
-  },
+    virtual_lines = {
+        current_line = true,
+    },
 })
-
-
