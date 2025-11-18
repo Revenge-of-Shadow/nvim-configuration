@@ -1,5 +1,5 @@
-vim.api.nvim_set_keymap('i', '<C-H>', '<C-W>', { noremap = true })
-
+vim.api.nvim_set_keymap('i', '<C-z>', '<nop>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-z>', '<nop>', { noremap = true })
 
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>vv", vim.cmd.Ex)
