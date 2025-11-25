@@ -2,6 +2,7 @@ vim.api.nvim_set_keymap('i', '<C-z>', '<nop>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-z>', '<nop>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Tab>', '<nop>', { noremap = true })
 vim.api.nvim_set_keymap('n', 'qq', '<nop>', { noremap = true })
+vim.api.nvim_set_keymap('n', 'q', '<nop>', { noremap = true })
 
 
 vim.g.mapleader = " "
@@ -19,7 +20,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("i", "<C-a>", "<Esc>A", { noremap = true })
-vim.keymap.set("n", "<C-a>", "<Esc>A", { noremap = true })
+vim.keymap.set("i", "<C-i>", "<Esc>I", { noremap = true })
 vim.keymap.set("i", "<C-o>", "<Esc>o", { noremap = true })
 vim.keymap.set("i", "<C-O>", "<Esc>O", { noremap = true })
 vim.api.nvim_set_keymap('i', '<C-H>', '<C-w>', { noremap = true })
