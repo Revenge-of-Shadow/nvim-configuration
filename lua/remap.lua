@@ -37,3 +37,5 @@ vim.keymap.set('n', '<leader>o', ':<C-u>call append(line("."), repeat([""], v:co
 vim.keymap.set('n', '<leader>O', ':<C-u>call append(line(".")-1, repeat([""], v:count1))<CR>')
 
 vim.api.nvim_set_keymap('n', '<C-f>', 'gg=G', { noremap = true })
+
+vim.fn.setreg('m', "Ithis.\x1blyiwPa = \x1bA;\x1bo")
