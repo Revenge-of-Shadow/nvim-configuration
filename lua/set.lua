@@ -1,6 +1,6 @@
 vim.opt.guicursor = ""
 
-vim.api.nvim_exec('language en_US', true)
+vim.api.nvim_exec('language en_GB.UTF-8', true)
 
 vim.opt.number = true
 vim.opt.relativenumber = false
